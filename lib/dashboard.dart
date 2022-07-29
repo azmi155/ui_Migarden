@@ -300,154 +300,21 @@ class _DashboardState extends State<Dashboard> {
                         children: [
                           Container(
                             child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 20)),
-                                    MonitorAir()
-                                  ],
-                                ),
-                              ),
-                            )),
+                                child: MonitorAir()),
                           ),
                           Container(
                             child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 20)),
-                                    Icon(
-                                      Icons.lightbulb_outline,
-                                      color: Colors.blue,
-                                      size: 70,
-                                    ),
-                                    Text("Light"),
-                                    Switch(
-                                      onChanged: (bool value) {
-                                        setState(() => this._switchVal = value);
-                                      },
-                                      value: this._switchVal,
-                                    ),
-                                    Text("ON"),
-                                  ],
-                                ),
-                              ),
-                            )),
+                                child: MonitorAir()),
                           ),
                           Container(
                             child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 20)),
-                                    Icon(
-                                      Icons.lightbulb_outline,
-                                      color: Colors.blue,
-                                      size: 70,
-                                    ),
-                                    Text("Light"),
-                                    Switch(
-                                      onChanged: (bool value) {
-                                        setState(() => this._switchVal = value);
-                                      },
-                                      value: this._switchVal,
-                                    ),
-                                    Text("ON"),
-                                  ],
-                                ),
-                              ),
-                            )),
+                                child: MonitorAir()),
                           ),
                           Container(
                             child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 20)),
-                                    Icon(
-                                      Icons.lightbulb_outline,
-                                      color: Colors.blue,
-                                      size: 70,
-                                    ),
-                                    Text("Light"),
-                                    Switch(
-                                      onChanged: (bool value) {
-                                        setState(() => this._switchVal = value);
-                                      },
-                                      value: this._switchVal,
-                                    ),
-                                    Text("ON"),
-                                  ],
-                                ),
-                              ),
-                            )),
+                                child: MonitorAir()),
                           ),
-                          Container(
-                            child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 20)),
-                                    Icon(
-                                      Icons.lightbulb_outline,
-                                      color: Colors.blue,
-                                      size: 70,
-                                    ),
-                                    Text("Light"),
-                                    Switch(
-                                      onChanged: (bool value) {
-                                        setState(() => this._switchVal = value);
-                                      },
-                                      value: this._switchVal,
-                                    ),
-                                    Text("ON"),
-                                  ],
-                                ),
-                              ),
-                            )),
-                          ),
-                          Container(
-                            child: new Card(
-                                child: Center(
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 20)),
-                                    Icon(
-                                      Icons.lightbulb_outline,
-                                      color: Colors.blue,
-                                      size: 70,
-                                    ),
-                                    Text("Light"),
-                                    Switch(
-                                      onChanged: (bool value) {
-                                        setState(() => this._switchVal = value);
-                                      },
-                                      value: this._switchVal,
-                                    ),
-                                    Text("ON"),
-                                  ],
-                                ),
-                              ),
-                            )),
-                          ),
+                         
                         ],
                       )),
                 )
