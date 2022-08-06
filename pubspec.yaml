@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   format_indonesia: ^0.1.0
   syncfusion_flutter_gauges:
+  syncfusion_flutter_charts: ^18.4.49
 
 dev_dependencies:
   flutter_test:

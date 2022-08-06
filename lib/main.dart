@@ -19,22 +19,21 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        leading: new Icon(
-          Icons.home,
-          color: Colors.blue,
-        ),
-        title: new Center(
-          child: new Text(
-            "Smart Garden >>",
-            style: new TextStyle(color: Colors.blue),
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leading: const Icon(
+            Icons.home,
+            color: Colors.blue,
           ),
+          title: const Center(
+            child: Text(
+              "Smart Garden >>",
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
+          actions: const <Widget>[Icon(Icons.home, color: Colors.blue)],
         ),
-        actions: <Widget>[new Icon(Icons.home, color: Colors.blue)],
-      ),
-      body: Dashboard()
-    );
+        body: const Dashboard());
   }
 }
