@@ -1,24 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:migarden/dashboard.dart';
+import 'package:migarden/firebase_options.dart';
 
-void main() {
-  runApp(new MaterialApp(
-    title: "SKRIPSHIT",
-    home: new Home(),
-  ));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const Home());
 }
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      title: "SKRIPSHIT",
+      home: Scaffold(
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -34,6 +34,8 @@ class _HomeState extends State<Home> {
           ),
           actions: const <Widget>[Icon(Icons.home, color: Colors.blue)],
         ),
-        body: const Dashboard());
+        body: Dashboard(),
+      ),
+    );
   }
 }

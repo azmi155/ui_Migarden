@@ -6,7 +6,6 @@ import 'package:format_indonesia/format_indonesia.dart';
 
 class HeaderHome extends StatefulWidget {
   const HeaderHome({Key? key}) : super(key: key);
-
   @override
   State<HeaderHome> createState() => _HeaderHomeState();
 }

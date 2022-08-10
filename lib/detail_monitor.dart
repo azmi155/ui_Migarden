@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 class DetailMonitor extends StatefulWidget {
@@ -23,8 +24,27 @@ class _DetailMonitorState extends State<DetailMonitor> {
         title: Text("Detail Indicaor"),
       ),
       body: Container(
-        child: SfSparkLineChart(
-            data: <double>[10, 6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10]),
+        child: Column(
+          children: [
+            SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                // Chart title
+                title: ChartTitle(text: 'Half'),
+                // Enable legend
+                legend: Legend(isVisible: true),
+                // Enable tooltip
+                tooltipBehavior: TooltipBehavior(enable: true),
+                series: <ChartSeries<_SalesData, String>>[
+                  LineSeries<_SalesData, String>(
+                      dataSource: data,
+                      xValueMapper: (_SalesData sales, _) => sales.year,
+                      yValueMapper: (_SalesData sales, _) => sales.sales,
+                      name: 'Sales',
+                      // Enable data label
+                      dataLabelSettings: DataLabelSettings(isVisible: true))
+                ]),
+          ],
+        ),
       ),
     );
   }
