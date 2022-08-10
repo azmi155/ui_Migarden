@@ -43,15 +43,6 @@ class _ListMonitorState extends State<ListMonitor> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextButton(
-            onPressed: () {
-              setState(() {
-                int random = Random().nextInt(100);
-                print(random);
-                ph = random;
-              });
-            },
-            child: Text("presss" + ph.toString())),
         Row(children: [
           Expanded(
               child: Card(
